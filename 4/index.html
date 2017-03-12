@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>第四次作业</title>
+	<style type="text/css">
+	body{
+		background-image:url(1.jpg);
+		text-align :center;
+	}
+	h1 {font-size:60px;
+		color: blue;}
+	h2 {font-size:50px;
+		font-family: Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York', serif;
+		color:#00FF66;
+	}
+	a{
+		font-weight: 700;
+		font-size:40px;
+		color:#33aabb;
+		font-style:italic;
+	}
+	th{color:#bbaacc;
+		font-size:30px;}
+	ol{
+		color:green;
+		font-size:40px;
+		font-style:oblique;
+		list-style-type: upper-roman
+	}
+	table,th,td
+	{
+	 border:2px solid blue;
+	 width:1500px;
+	 height:100px;
+	 padding:15px;
+	  border-collapse:collapse;
+	}
+	</style>
+</head>
+<body>
+	<h1 >今天的内容主要是有关链接的知识</h1>
+	<h2 id="6">目录</h2>
+	<p>
+		<ol>
+			<li><a href="#1">target属性的用法</a></li><br><br>
+			<li><a href="#2">href属性的用法</a></li><br><br>
+			<li><a href="#3">download属性的用法</a></li><br><br>
+			<li><a href="#4">图片链接</a></li><br><br>
+		</ol>
+	</p>
+	<a id="1"></a>
+	<table align="center">
+		<tr>
+			<th colspan="3">target属性的用法</th>
+		</tr>
+		<tr>
+			<td>取值</td>
+			<td>含义</td>
+			<td>实例</td>
+		</tr>
+		<tr>
+			<td>_blank</td>
+			<td>在新窗口打开链接</td>
+			<td><a href="https://www.baidu.com" target="_blank">target="_blank"</a></td>
+		</tr>
+		<tr>
+			<td>_self</td>
+			<td>默认取值，链接所在文件相同位置打开链接</td>
+			<td><a href="https://www.baidu.com" target="_self">target="_self"</a></td>
+		</tr>
+		<tr>
+			<td>_parent</td>
+			<td>在父窗口打开链接</td>
+			<td><a href="#5">请往下看</a></td>
+		</tr>
+		<tr>
+			<td>_top</td>
+			<td>清除所有框架，在整个浏览器中打开链接</td>
+			<td><a href="#5">请往下看</a></td>
+		</tr>
+		<tr>
+			<td>框架名</td>
+			<td>在相应的框架中打开链接</td>
+			<td><a href="https://www.baidu.com" target="a">比如说A框架中打开</a></td>
+		</tr>
+	</table>
+	|||<br>|||||<br>||||<br>||||<br>|||||<br>||||||<br>|||||<br>||||<br>|||<br>||<br>|<br>
+	<a id="5"></a>
+	<iframe name="a"  src="linka.html" frameborder="1" width="1000" height="700" frameborder="1"></iframe>
+	<!-- helf用法 -->
+	|||<br>|||||<br>||||<br>||||<br>|||||<br>||||||<br>|||||<br>||||<br>|||<br>||<br>|<br>
+	<a id="2"></a>
+	<table align="center">
+		<tr>
+			<th>
+				helf属性的用法
+			</th>
+		</tr>
+		<tr>
+			<td><a href="1.txt" target="_blank" >1.打开txt文件</a></td>
+		</tr>
+		<tr>
+			<td><a href="天空之城钢琴.mp3" target="_blank">1.打开mp3文件</a></td>
+		</tr>
+		<tr>
+			<td><a href="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_ca79a146.png" target="_blank" >3.打开百度logo图片</a></td>
+		</tr>
+	</table>
+	|||<br>|||||<br>||||<br>||||<br>|||||<br>||||||<br>|||||<br>||||<br>|||<br>||<br>|<br>
+	<a id="3"></a>
+	<!-- download属性的用法 -->
+	<table align="center">
+		<tr>
+			<th>
+				download属性的用法
+			</th>
+		</tr>
+		<tr>
+			<td><a href="1.txt" download="true" >1.下载txt文件</a></td>
+		</tr>
+		<tr>
+			<td><a href="天空之城钢琴.mp3" download="true">1.下载mp3文件</a></td>
+		</tr>
+		<tr>
+			<td><a href="2.png" download="true" >3.下载百度logo图片</a></td>
+		</tr>
+		<tr><a href="1.doc">4.下载Word文件</a></tr>
+	</table>
+	|||<br>|||||<br>||||<br>||||<br>|||||<br>||||||<br>|||||<br>||||<br>|||<br>||<br>|<br>
+	<!-- 图片链接 -->
+	<a id="4"></a>
+	<a href="https://baidu.com" target="_blank"><img src="2.png"></a>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<a href="#6" title="单击返回顶部">感谢你的观看</a>
+	<br>
+	<br>
+	<br>
+	<br>
+	<h2>庆哥以下为历次作业</h2>
+	<ol>
+		<li><a href="https://fullofvigour.github.io/work/1/index.html" target="_blank" />第一次作业</a></li>
+		<li><a href="https://fullofvigour.github.io/work/2/index.html" target="_blank" />第二次作业</a></li>
+		<li><a href="https://fullofvigour.github.io/work/3/index.html" target="_blank" />第三次作业</a></li>
+	</ol>
+</body>	
+</html>
