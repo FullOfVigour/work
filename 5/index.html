@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>第五次作业</title>
+<style>
+	body {
+    text-align: center;
+    background-image:url(1.jpg);
+	}
+	table,th,td
+	{
+	 border:2px solid yellow;
+	 width:800px;
+	 padding:15px;
+	  border-collapse:collapse;
+	}
+	h1{font-size:60px;
+		color:#666666;
+	}
+	a{
+		font-weight: 700;
+		font-size:40px;
+		color:#33aabb;
+		font-style:italic;
+	}
+	th{
+		color:#bbaacc;
+		font-size:30px;
+	}
+	td{color:#00FF66;
+		font-size:20px;}
+	h2{
+		color:#bbaacc;
+		/*color:#00FF66*/
+		font-size:30px;
+	}
+	h4{color:#ffFF00;
+		font-size:20px;}
+		li,ol,ul,dl{color:#ffFF00;
+		font-size:20px;}
+</style>
+</head>
+<body>
+	<h1>列表的使用</h1>
+	<h2>
+		<ul>
+			<li><a href="#1">有序列表</a></li>
+			<li><a href="#2">无序列表</a></li>
+			<li><a href="#3">定义列表</a></li>
+		</ul>
+	</h2>
+	<br>
+
+	<!-- 有序列表 -->
+	<table align="center" id="1">
+		<tr>
+			<th colspan="3">有序列表</th>
+		</tr>
+		<tr>
+			<td>属性</td>
+			<td>值</td>
+			<td>描述</td>
+		</tr>
+		<tr>
+			<td>reversed</td>
+			<td>reversed</td>
+			<td><a href="#4">规定列表顺序为降序。(9,8,7...)</a></td>
+		</tr>
+		<tr>
+			<td>start</td>
+			<td>number</td>
+			<td><a href="#5">规定有序列表的起始值。</a></td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>
+			<a href="#6">1</a><br>
+			<a href="#7">A</a><br>
+			<a href="#8">a</a><br>
+			<a href="#9">I</a><br>
+			<a href="#10">i</a><br>
+			</td>
+			<td>规定在列表中使用的标记类型。</td>
+		</tr>
+	</table>
+	<br><br><br><br><br>
+		<h4 id="4">降序列表</h4>	
+		<ol reversed>
+			<li>苹果</li>
+			<li>香蕉</li>
+			<li>柠檬</li>
+			<li>桔子</li>
+		</ol>
+
+		<h4 id="5">规定起始值的列表</h4>
+		<ol start="4">
+		 <li>苹果</li>
+		 <li>香蕉</li>
+		 <li>柠檬</li>
+		 <li>桔子</li>
+		</ol>  
+
+		<h4 id="6">数字列表：</h4>
+		<ol>
+		 <li>苹果</li>
+		 <li>香蕉</li>
+		 <li>柠檬</li>
+		 <li>桔子</li>
+		</ol>  
+
+		<h4 id="7">字母列表：</h4>
+		<ol type="A">
+		 <li>苹果</li>
+		 <li>香蕉</li>
+		 <li>柠檬</li>
+		 <li>桔子</li>
+		</ol>  
+		
+		<h4 id="8">小写字母列表：</h4>
+		<ol type="a">
+		 <li>苹果</li>
+		 <li>香蕉</li>
+		 <li>柠檬</li>
+		 <li>桔子</li>
+		</ol>  
+
+		<h4 id="9">罗马字母列表：</h4>
+		<ol type="I">
+		 <li>苹果</li>
+		 <li>香蕉</li>
+		 <li>柠檬</li>
+		 <li>桔子</li>
+		</ol>  
+		<br><br><br><br><br><br><br><br>
+		<h4 id="10">小写罗马字母列表：</h4>
+		<ol type="i">
+		 <li>苹果</li>
+		 <li>香蕉</li>
+		 <li>柠檬</li>
+		 <li>桔子</li>
+		</ol>  
+		<a href="1.png" target="_blank"><img src="1.png"></a><br><br>
+		<a href="2.png" target="_blank"><img src="2.png"></a>
+	<br>
+	<!-- 无序列表 -->
+	<h2 id="2">无序列表</h2>
+	<a href="3.png" target="blank" ><img src="3.png"></a><br>
+	<a href="4.png" target="blank" ><img src="4.png"></a><br>
+	<!-- 定义列表 -->
+	<h2 id="3">定义列表：</h2>
+
+	<dl>
+   	<dt>计算机</dt>
+   	<dd>用来计算的仪器 ... ...</dd>
+	<dt>显示器</dt>
+	<dd>以视觉方式显示信息的装置 ... ...</dd>
+	<a href="5.png" target="blank" ><img src="5.png"></a><br>
+</dl>
+</body>
+</html>
