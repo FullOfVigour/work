@@ -1,0 +1,37 @@
+.a1 a:link {
+	color:blue; 
+	background-color: rgba(0,255,0,0.3);
+	}		/* 未访问的链接 */
+	
+.a1 a:visited {
+	color: #00FF00;
+	background-color: rgba(111,111,111,0.3);
+}	/* 已访问的链接 */
+.a1 a:hover {
+	color: #FF00FF;
+	background-color: rgba(222,222,222,0.8);
+	}	/* 鼠标移动到链接上 */
+.a1 a:active {
+	color: #0000FF;
+	background-color: rgba(10,11,12,0.5);
+	}	/* 选定的链接 */
+.a1 { 
+	font:20px verdana, arial, sans-serif;
+}
+.a1, .a1 li {
+list-style:none; 
+padding:0;
+margin:4px 0; 
+text-decoration:none;
+}
+.a1 li a {
+display:block; 
+max-width:200px; 
+height:50px; 
+line-height:50px;
+text-align:center; 
+
+
+text-decoration:none; 
+border-bottom:1px solid peru; 
+}
