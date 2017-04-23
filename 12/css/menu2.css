@@ -6,10 +6,9 @@
 	display: table;
 	clear: both;
 }
-.menu{
+.menu2{
 	width: 80%;
 	margin:auto;
-	margin-bottom: 200px;
 	height: 50px;
 	background: linear-gradient(#ccc 10%,#aaa,#ccc 90%);
 	border-radius: 25px;
@@ -21,18 +20,18 @@ div{
 	padding: 0;
 	position: relative;
 }
-.menu ul{
+.menu2 ul{
 	list-style-type: none;
 	padding: 0;
 	
 }
-.menu ul li{
+.menu2 ul li{
 	float: left;
 	z-index: 2;
 	position: relative;
 }
 
-.menu li a{
+.menu2 li a{
 	text-decoration: none;
 	display: inline-block;
 	color: #FFFFFF;
@@ -41,8 +40,9 @@ div{
 	line-height: 50px;
 	text-align: center;
 }
-.menu li:hover a,
-.menu li.active a{
+.menu2 li:hover a,
+.menu2 li.active a{
+	
 	color: #333333;
 }
 
@@ -52,17 +52,17 @@ a i:before{
 	overflow: hidden;
 	transition: all 0.5s;
 }
-.menu a:hover i:before{
+.menu2 a:hover i:before{
 	width: 20px;
 	color: #212;
 	margin-right: 5px;
 	font-size: 20px;
 }
-.menu li ul{
+.menu2 li ul{
 	padding: 0;
 	position: absolute;
 	top:55px;
-	
+
 	max-height: 0px;
 	overflow: hidden;
 	transition: all 0.8s;
@@ -72,15 +72,12 @@ a i:before{
 	box-shadow: inset 0px 0px 4px rgba(0,0,0,0.2);
 	z-index: -1;
 }
-
-.menu li:hover ul{
+.menu2 li:hover ul{
 	max-height: 1000px;
+	z-index: 1;
 
 }
-.menu3 li:hover a{
-	background-color: rgba(121,121,121,0.3);
-}
-.menu li ~ .kuai{
+.menu2 li ~ .kuai{
 	width: 120px;
 	height: 40px;
 	background:radial-gradient(#ccc, #bbb,#aaa);
@@ -90,23 +87,56 @@ a i:before{
 	transition: left 0.5s;
 	z-index: -1;
 }
-.menu li:hover ~ .kuai{
+.menu2 li:hover ~ .kuai{
 	z-index: 1;
 }
-.menu li:nth-of-type(1):hover ~ .kuai{
+.menu2 li:nth-of-type(1):hover ~ .kuai{
 	left: 15px;
 
 }
-.menu li:nth-of-type(2):hover ~ .kuai{
+.menu2 li:nth-of-type(2):hover ~ .kuai{
 	left: 165px;
 
 }
-.menu li:nth-of-type(3):hover ~.kuai{
+.menu2 li:nth-of-type(3):hover ~.kuai{
 	left: 315px;
 }
-.menu li:nth-of-type(4):hover ~.kuai{
+.menu2 li:nth-of-type(4):hover ~.kuai{
 	left: 465px;
 }
-.menu li:nth-of-type(5):hover ~ .kuai{
+.menu2 li:nth-of-type(5):hover ~ .kuai{
 	left: 615px;
+}
+.kuai2 li ~ .kuai3{
+	width: 0px;
+	height: 40px;
+	background:radial-gradient(#ccc, #bbb,#aaa);
+	border-radius: 15px;
+	position: absolute;
+	top: -55px;
+	left: 15px;
+	overflow: hidden;
+	transition: top 0.5s;
+	opacity: 0.5; 
+	z-index: 1;
+}
+.kuai2 li:hover ~ .kuai3{
+	width: 120px;
+}
+.kuai2 li:nth-of-type(1):hover ~ .kuai3{
+	top: 5px;
+
+}
+.kuai2 li:nth-of-type(2):hover ~ .kuai3{
+	top: 55px;
+
+}
+.kuai2 li:nth-of-type(3):hover ~.kuai3{
+	top: 105px;
+}
+.kuai2 li:nth-of-type(4):hover ~.kuai3{
+	top: 155px;
+}
+.kuai2 li:nth-of-type(5):hover ~ .kuai3{
+	top: 205px;
 }
