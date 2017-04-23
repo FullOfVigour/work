@@ -1,0 +1,142 @@
+*{
+  box-sizing: border-box;
+}
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.menu2{
+	width: 80%;
+	margin:auto;
+	height: 50px;
+	background: linear-gradient(#ccc 10%,#aaa,#ccc 90%);
+	border-radius: 25px;
+	box-shadow:0px 0px 20px 0px rgba(105,105,105,0.8);
+}
+div{
+	width: 60%;
+	margin: auto;
+	padding: 0;
+	position: relative;
+}
+.menu2 ul{
+	list-style-type: none;
+	padding: 0;
+	
+}
+.menu2 ul li{
+	float: left;
+	z-index: 2;
+	position: relative;
+}
+
+.menu2 li a{
+	text-decoration: none;
+	display: inline-block;
+	color: #FFFFFF;
+	width:150px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+.menu2 li:hover a,
+.menu2 li.active a{
+	
+	color: #333333;
+}
+
+a i:before{
+	display: inline-block;
+	width: 0px;
+	overflow: hidden;
+	transition: all 0.5s;
+}
+.menu2 a:hover i:before{
+	width: 20px;
+	color: #212;
+	margin-right: 5px;
+	font-size: 20px;
+}
+.menu2 li ul{
+	padding: 0;
+	position: absolute;
+	top:55px;
+
+	max-height: 0px;
+	overflow: hidden;
+	transition: all 0.8s;
+	color:#000000;
+	background:linear-gradient(#fff,#ddd);
+	border-radius: 0 0 6px 6px;
+	box-shadow: inset 0px 0px 4px rgba(0,0,0,0.2);
+	z-index: -1;
+}
+.menu2 li:hover ul{
+	max-height: 1000px;
+	z-index: 1;
+
+}
+.menu2 li ~ .kuai{
+	width: 120px;
+	height: 40px;
+	background:radial-gradient(#ccc, #bbb,#aaa);
+	border-radius: 15px;
+	position: absolute;
+	top: 5px;
+	transition: left 0.5s;
+	z-index: -1;
+}
+.menu2 li:hover ~ .kuai{
+	z-index: 1;
+}
+.menu2 li:nth-of-type(1):hover ~ .kuai{
+	left: 15px;
+
+}
+.menu2 li:nth-of-type(2):hover ~ .kuai{
+	left: 165px;
+
+}
+.menu2 li:nth-of-type(3):hover ~.kuai{
+	left: 315px;
+}
+.menu2 li:nth-of-type(4):hover ~.kuai{
+	left: 465px;
+}
+.menu2 li:nth-of-type(5):hover ~ .kuai{
+	left: 615px;
+}
+.kuai2 li ~ .kuai3{
+	width: 0px;
+	height: 40px;
+	background:radial-gradient(#ccc, #bbb,#aaa);
+	border-radius: 15px;
+	position: absolute;
+	top: -55px;
+	left: 15px;
+	overflow: hidden;
+	transition: top 0.5s;
+	opacity: 0.5; 
+	z-index: 1;
+}
+.kuai2 li:hover ~ .kuai3{
+	width: 120px;
+}
+.kuai2 li:nth-of-type(1):hover ~ .kuai3{
+	top: 5px;
+
+}
+.kuai2 li:nth-of-type(2):hover ~ .kuai3{
+	top: 55px;
+
+}
+.kuai2 li:nth-of-type(3):hover ~.kuai3{
+	top: 105px;
+}
+.kuai2 li:nth-of-type(4):hover ~.kuai3{
+	top: 155px;
+}
+.kuai2 li:nth-of-type(5):hover ~ .kuai3{
+	top: 205px;
+}
