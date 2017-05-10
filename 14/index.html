@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>表单效果实现</title>
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 0;
+				background-color: #ace;
+			}
+			.form{
+				background-color: #fff;
+				width: 500px;
+				height: 300px;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+				text-align: center;
+				line-height: 1;
+				box-shadow: 0px 0px 10px 1px rgba(0,0,0,.5);
+			}
+			.form input:not([type="submit"]){
+				width: 350px;
+				height: 40px;
+				margin: 10px 0;
+				border: 1px dashed #ace;
+				outline: none;
+				text-indent: 1em;
+				transition: all .5s;
+			}
+			.form input[type="submit"]{
+				width: 200px;
+				height: 40px;
+				background-color: rgba(170,204,238,1);
+				border: none;
+				outline: none;
+				box-shadow: 0px 3px rgba(50,50,100,.5),1px 1px 4px 0 rgba(0,0,0,.5);
+				cursor: pointer;
+				transition: all .5s;				
+			}
+			.form input:hover{
+				border: 1px solid lightblue;
+				box-shadow: inset 0px 0px 6px 0px rgba(0,0,0,.5);
+			}
+			.form input[type="submit"]:hover{
+				letter-spacing: 5px;
+				background-color: rgba(170,204,238,0.3);
+			}
+		</style>
+	</head>
+	<body>
+		<form action="#" class="form">
+			<h3>个人信息</h3>
+			<input type="text" name="name" id="name" placeholder="输入您的姓名" />
+			<input type="text" name="age" id="age" placeholder="输入您的年龄"/>
+			<input type="email" name="mail" id="mail" placeholder="输入您的邮箱"/>
+			<input type="submit" value="提交信息" />
+		</form>
+	</body>
+</html>
