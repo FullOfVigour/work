@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+	</head>
+	<body>
+		<div class="myhome">
+			<a id="d"></a>
+			<header>
+				<a href="index.html" class="logo"><img src="img/bugsee.svg" alt="" /></a>
+				<nav class="menu clearfix">
+					<ul>
+						<li><a href="#d">主页</a></li>
+						<li><a href="#a">关于</a></li>
+						<li><a href="#b">工作</a></li>
+						<li><a href="#c">联系</a></li>
+					</ul>
+				</nav>
+				<h1>大家好，我是徐晗</h1>
+				<p>我是一个移应班的学生，我喜欢喝咖啡，奶茶，香甜与苦涩都是会令人愉悦的味道。</p>
+				<p>我很热爱生活，虽然命运对我不太友好，但是阳光总在风雨后不是吗？</p>
+				<p>在大学一年的时间里我参加了许许多多的活动，结识了形形色色的人物，</p>
+				<p>我羡慕的，厌恶的皆有之，我一直在寻找，寻找一些志同道合的人，我想要交一些朋友。</p>				
+			</header>
+			<main>
+				<a id="a"></a>
+				<section class="interests clearfix">
+					<h2>我的兴趣</h2>
+					<ul>
+						<li><a href="#" title="我">看电影</a></li>
+						<li><a href="#" title="非">打乒乓</a></li>
+						<li><a href="#" title="常">喝咖啡</a></li>
+						<li><a href="#" title="正">看小说</a></li>
+						<li><a href="#" title="常">发呆</a></li>
+						<li><a href="#" title="未完待续...">...</a></li>
+					</ul>
+				</section>
+				<a id="b"></a>
+				<section class="img clearfix">
+					<h2>项目示例</h2>
+					<ul>					
+						<li><img src="img/2.jpg" alt="" /><span>代表项目</span></li>
+						<li><img src="img/3.jpg" alt="" /><span>代表项目</span></li>
+						<li><img src="img/4.jpg" alt="" /><span>代表项目</span></li>
+						<li><img src="img/5.jpg" alt="" /><span>代表项目</span></li>
+						<li><img src="img/6.jpg" alt="" /><span>代表项目</span></li>
+						<li><img src="img/7.jpg" alt="" /><span>代表项目</span></li>
+					</ul>
+				</section>
+				<a id="c"></a>
+				<section class="contact">
+					<h2>联系我们</h2>
+					<p>如之前所说，我想找一些志同道合的朋友，所以如果你觉得我们有着共同的目标不妨来联系我。</p>
+					<p><b>你好，未来的朋友！</b></p>
+					<dl>
+						<dt>邮箱:</dt>
+						<dd><b>******</b>@qq.com</dd>
+						<dt>QQ:</dt>
+						<dd><b>******</b></dd>
+						<dt>电话:</dt>
+						<dd><b>******</b></dd>
+					</dl>
+					<div class="inp clearfix">
+						<input type="text" name="name" id="name" value="姓名" />
+						<input type="text" name="email" id="email" value="邮箱" />
+						<select name="fav" id="fav">
+							<option value="fav">兴趣</option>
+							<option value="web">网页开发</option>
+							<option value="app">应用开发</option>
+							<option value="html5">html5开发</option>
+							<option value="chat">微信开发</option>
+						</select>
+						<textarea name="message" id="message" placeholder="留言"></textarea>
+						<input type="submit" name="submit" id="submit" value="提交信息"/>
+					</div>
+				</section>
+			</main>
+			<footer>
+				<p>&copy; 某某某版权所有，如有雷同，非常感谢！</p>
+			</footer>
+		</div>
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('header a').on('click', function(e) {
+					e.preventDefault();
+					$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500);
+				});
+				$('#goTop').on('click', function(e) {
+					e.preventDefault();
+					$('html, body').animate({ scrollTop: 0}, 500);
+				});
+			});
+		</script>
+	</body>
+</html>
