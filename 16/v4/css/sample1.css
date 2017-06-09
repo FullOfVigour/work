@@ -104,6 +104,11 @@ header .topMenu ul li{
 	float: left;
 	margin: 0px 30px;
 }
+
+header .scrollspy ul .active a,
+header .topMenu ul li a:hover{
+	color: #339BEB;
+}
 /*
  * banner
  * */
