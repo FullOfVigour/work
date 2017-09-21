@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 20px;
+			}
+			#TableColor{
+				border-collapse: collapse;
+				border: 2px solid rgba(121,121,121,0.5);
+			}
+			#TableColor tr td{
+				width: 60px;
+				height: 60px;
+				border: 1px solid rgba(121,121,121,0.3);
+			}
+		</style>
+	</head>
+	<body>
+		<table id="TableColor">
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<input type="button" name="a" id="a" value="初始" onclick="clicked(this.id)"/>
+		<input type="button" name="b" id="b" value="所有单元格渐变色" onclick="clicked(this.id)"/>
+		<input type="button" name="c" id="c" value="隔行变色" onclick="clicked(this.id)"/>
+		<input type="button" name="d" id="d" value="行色渐变" onclick="clicked(this.id)"/>
+		<input type="button" name="e" id="e" value="隔列变色" onclick="clicked(this.id)"/>
+		<input type="button" name="f" id="f" value="列色渐变" onclick="clicked(this.id)"/>
+		<script type="text/javascript">
+			var oTd = document.querySelectorAll("#TableColor td");
+			var i =0;
+			function clicked(id){
+				switch (id){
+					case "a":for(i=0;i<oTd.length;i++){oTd[i].style.background ="#fff"};
+						break;
+					case "b":for(i=0;i<oTd.length;i++){oTd[i].style.background = "hsla(" + i * 2 + ",50%,50%,.5)";};
+						break;
+					case "c":for(i=0;i<oTd.length;i++){oTd[i].style.background = "hsla("+((i/10)%2)*20+",50%,50%,.5)";};
+						break;
+					case "d":for(i=0;i<oTd.length;i++){oTd[i].style.background = "hsla("+((i/10)%10)*20+",50%,50%,.5)";};
+						break;
+					case "e":for(i=0;i<oTd.length;i++){oTd[i].style.background = "hsla("+((i%10)%2)*20+",50%,50%,.5)";};
+						break;
+					default:for(i=0;i<oTd.length;i++){oTd[i].style.background = "hsla("+(i%10)*20+",50%,50%,.5)";};
+						break;
+				}
+			}
+		</script>
+	</body>
+</html>
