@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>猜数字小游戏</title>
+		<style type="text/css">
+			*,
+			*::before,
+			*::after{
+				box-sizing: border-box;
+			}
+			#content{
+				position: relative;
+				width: 30%;
+				min-height: 300px;
+				margin:200px 40%;
+			}
+			#ipt{
+				width: 200px;
+				height: 30px;
+				border: 1px solid rgba(0,0,0,0.5);
+				border-radius: 20px 0 0 20px;
+				outline: none;
+				text-indent: 1em;
+			}
+			#btn1,#btn2{
+				display: none;
+				background-color: #fff;
+				width: 50px;
+				height: 30px;
+				position: absolute;
+				border: 1px solid rgba(0,0,0,0.5);
+				border-radius:0 20px 20px 0;
+				outline: none;
+			}
+		</style>
+	</head>
+	</head>
+	<body>
+		<div id="content">
+			<input type="number" id="ipt"/>
+			<input type="button" id="btn1" value="确定"/>
+			<input type="button" id="btn2" value="重来" />
+			<p>所剩次数：<span id="time">6</span></p>
+			<p>猜测历史：</p>
+			<div id="history">
+			</div>
+		</div>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			var oIpt=document.getElementById("ipt");
+			var oBtn1=document.getElementById("btn1");
+			var oBtn2=document.getElementById("btn2");
+			var oTime=document.getElementById("time");
+			var Num;
+			var NumRight;
+			var i;
+			function NuR(){
+				return parseInt(Math.random()*100);
+			};
+			function clear(){
+				oIpt.value = "";
+				NumRight=NuR();
+				i=6;
+				oTime.innerText=i;
+				$("#history").html("");
+				oBtn1.style.display = "inline-block";
+				oBtn2.style.display = "none";
+			}
+			clear();
+//			alert(NumRight);
+			oBtn1.addEventListener('click',clicked);
+			oBtn2.addEventListener('click',clear);
+			function clicked(){
+				Num=oIpt.value;
+				if(isNaN(Num)){
+				　　　alert("请输入数字");
+					oIpt.value = "";
+				　　　return false;
+					clear();
+				}
+				else{
+					if(i!=0){
+						i--;
+						oTime.innerText=i;
+						if(Num>NumRight){
+							$("#history").append("<p>你猜的数字过大</p>");
+							oIpt.value = "";
+						}
+						else {
+							if(Num<NumRight){
+								$("#history").append("<p>你猜的数字过小</p>");
+								oIpt.value = "";
+							}
+							else{
+								alert("恭喜你，猜对了！！！");
+								clear();
+							}
+						}
+					}
+					else{
+						alert("很抱歉，你已经没有猜测机会了，请重新开始游戏");
+						oIpt.value = "";
+						oBtn2.style.display = "inline-block";
+						oBtn1.style.display = "none";
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
