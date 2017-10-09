@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{
+				position: relative;
+			}
+			.wrapper{
+				border: 1px solid #000;
+				width: 1200px;
+				height: 220px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin: auto;
+			}
+			.wrapper h2{
+				text-align: center;
+			}
+			.wrapper #ChouJiang{
+				width:100px;
+				height: 40px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin: auto;
+			}
+			/*奖项标签*/
+			.wrapper .prize_a{
+				/*border: 1px solid #000;*/
+				list-style: none;
+				height: 80px;
+				position: absolute;
+				top: 100px;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+			}
+			.wrapper .prize_a .prize_b{
+				margin-bottom: 7px;
+			}
+			.wrapper .prize_a .prize_b label{
+				margin-right: 20px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h2>JavaScript抽奖系统</h2>
+			<input type="button" name="ChouJiang" id="ChouJiang" value="抽奖" />
+			<ul class="prize">
+				<li class="prize_b">
+					<label for="#">一等奖</label>
+					<input type="text" name="one" class="prize_c"/>
+				</li>
+				<li class="prize_b">
+					<label for="#">二等奖 </label>
+					<input type="text" name="two" class="prize_c"/>
+					<input type="text" name="two" class="prize_c"/>
+				</li>
+				<li class="prize_b">
+					<label for="#">三等奖 </label>
+					<input type="text" name="three" class="prize_c"/>
+					<input type="text" name="three" class="prize_c"/>
+					<input type="text" name="three" class="prize_c"/>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var oBtn=document.getElementById("ChouJiang");
+			var oNum=document.querySelectorAll(".prize_c")
+			//存放已中奖者的下标
+			var oX=[];
+			var i,
+			j,
+			n=5;
+			oBtn.addEventListener('click', Prize);
+			function Prize() {
+				oX[0]=Math.floor(Math.random() * 45+1);
+				for(j=1;j < 6;j++){
+					oX[j]=Math.floor(Math.random() * 45+1);
+					for(i=0;i < oX.length - 1;i++) {
+						if(oX[i]==oX[j]) {
+							oX[j]=Math.floor(Math.random() * 45+1);
+							i=-1;
+						}
+					}
+				}
+				for(i=0;i<6;i++){
+					oNum[i].value=oX[i];
+				}
+				console.log(oNum[2]);
+				oX.splice(0, oX.length);
+			}
+		</script>
+	</body>
+</html>
