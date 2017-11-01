@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			#a{
+				position: absolute;
+				left: 50px;
+				right: 0;
+				top: 50px;
+				width: 300px;
+				/*margin: auto;*/
+			}
+			img{
+				width: 100%;
+			}
+			#b{
+				display: none;
+				position: absolute;
+				margin: auto;
+				border: 1px dashed #000;
+				pointer-events: none;
+				transform: translate(-50%,-50%);
+			}
+			#a img:hover~#b,#a img:hover~#c{
+				display: block;
+			}
+			#c{
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin: auto;
+				display: none;
+				background-color: #eac;
+				background: url(img/1.jpg) no-repeat scroll top left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="a">
+			<img src="img/1.jpg"/>
+			<div id="b"></div>
+			<div id="c"></div>
+		</div>
+		<script type="text/javascript">
+			var oA=document.getElementById("a");
+			var oB=document.getElementById("b");
+			var oC=document.getElementById("c");
+			var img=document.querySelector("img");
+			var ratio;
+			img.addEventListener("load",function(event) {
+				ratio=img.naturalWidth/img.width;
+			})
+			oA.addEventListener("mousemove",function(event){
+				var oX=event.offsetX;
+				var oY=event.offsetY;
+				oB.style.top=oY+"px";
+				oB.style.left=oX+"px";
+				oC.style.width=(img.offsetWidth)+"px";
+				oC.style.height=(img.offsetHeight)+"px";
+				oB.style.width=(img.offsetWidth)/ratio+"px";
+				oB.style.height=(img.offsetHeight)/ratio+"px";
+				oC.style.backgroundPosition=(-oX*ratio+140)+"px "+(-oY-15)+"px";
+			});
+		</script>
+	</body>
+</html>
